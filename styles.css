@@ -45,3 +45,24 @@ button {
 .top {
     font-size: 35px;
 }
+
+.row1Container {
+    display: flex;
+}
+
+.row2Container {
+    display: flex;
+}
+
+.row3Container {
+    display: flex;
+}
+
+.row4Container {
+    display: flex;
+}
+
+.row5Container {
+    display: flex;
+}
+
