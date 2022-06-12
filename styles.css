@@ -36,3 +36,8 @@ button {
 .display {
     font-size: 90px;
 }
+
+.zero {
+    height: 100px;
+    width: 210px;
+}
