@@ -26,5 +26,5 @@ const operation = function(a, operator, b) {
 
 }
 
-operation(1, "+" , 3)
-alert(result)
+// operation(1, "*" , 3)
+// alert(result)
