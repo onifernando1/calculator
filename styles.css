@@ -23,4 +23,16 @@ button {
     background-color: blue;
     height: 200px;
     width: 400px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+
+
+.display {
+    font-size: 90px;
 }
