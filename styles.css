@@ -6,6 +6,8 @@ button {
     width: 100px;
     background-color: grey;
     color: white;
+    border-radius: 25px;
+
 }
 
 .base {
@@ -21,6 +23,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 25px;
 }
 
 .displayContainer {
@@ -31,6 +34,7 @@ button {
     align-items: center;
     justify-content: center;
     margin:20px;
+    border-radius: 25px;
 
 
 }
