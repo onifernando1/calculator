@@ -4,6 +4,8 @@ button {
     margin: 5px;
     height: 100px;
     width: 100px;
+    background-color: grey;
+    color: white;
 }
 
 .base {
@@ -13,8 +15,8 @@ button {
 }
 .container {
     height: 900px;
-    width: 600px;
-    background-color: red;
+    width: 550px;
+    background-color: rgb(59, 55, 55);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,9 +24,9 @@ button {
 }
 
 .displayContainer {
-    background-color: blue;
+    background-color: rgb(164, 164, 176);
     height: 200px;
-    width: 400px;
+    width: 426px;
     display:flex;
     align-items: center;
     justify-content: center;
