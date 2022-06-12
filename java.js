@@ -7,3 +7,9 @@ const divide = (a,b) => result = a / b ;
 
 add(1,3)
 console.log(result)
+
+const operation = function(operator, a, b) {
+
+
+
+}
