@@ -1,7 +1,7 @@
 button {
     padding: 10px;
     font-size: 80px;
-
+    margin: 5px;
 }
 
 .base {
@@ -26,7 +26,7 @@ button {
     display:flex;
     align-items: center;
     justify-content: center;
-
+    margin:20px;
 
 
 }
