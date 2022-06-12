@@ -1,6 +1,9 @@
-const add = (a,b) => a + b ;
-const subtract = (a,b) => a - b ; 
-const multiply = (a,b) => a * b ;
-const divide = (a,b) => a / b ;
+let result = 0
 
-add(1,2)
+const add = (a,b) => result = a + b ;
+const subtract = (a,b) => result = a - b ; 
+const multiply = (a,b) => result = a * b ;
+const divide = (a,b) => result = a / b ;
+
+add(1,3)
+console.log(result)
