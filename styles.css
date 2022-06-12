@@ -1,3 +1,9 @@
+body {
+    background-color: rgb(198, 197, 197);
+}
+
+
+
 button {
     padding: 10px;
     font-size: 70px;
@@ -24,6 +30,7 @@ button {
     align-items: center;
     justify-content: center;
     border-radius: 25px;
+    margin-top: 50px;
 }
 
 .displayContainer {
