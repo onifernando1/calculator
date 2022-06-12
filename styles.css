@@ -1,0 +1,15 @@
+button {
+    padding: 10px;
+    
+
+}
+
+.container {
+    height: 800px;
+    width: 500px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
