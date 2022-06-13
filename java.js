@@ -22,10 +22,6 @@ const divide = (a,b) => result = a / b ;
 
 //Operation function
 const operation = function(a, operator, b) {
-
-    a = parseInt(a)
-    a = parseInt(b)
-
     
     if (operator == "+") {
         add(a,b)
@@ -123,27 +119,30 @@ let splitUpString = function(x) {
     if (x.includes("+")) {
     let split = x.split("+")
     console.log(split)
-    numbersBefore = split[0]
-    numbersAfter = split[1]
+    numbersBefore = parseInt(split[0])
+    numbersAfter = parseInt(split[1])
     operator = "+" 
+    console.log({numbersBefore})
+    console.log({numbersAfter})
+    console.log({operator})
     
     } else if (x.includes("-")) {
         let split = x.split("-")
         console.log(split)
-        numbersBefore = split[0]
-        numbersAfter = split[1]
+        numbersBefore = parseInt(split[0])
+        numbersAfter = parseInt(split[1])        
         operator = "-"
     } else if (x.includes("*")) {
             let split = x.split("*")
             console.log(split)
-            numbersBefore = split[0]
-            numbersAfter = split[1]
+            numbersBefore = parseInt(split[0])
+            numbersAfter = parseInt(split[1])            
             operator = "*"
     } else if (x.includes("/")) {
                 let split = x.split("/")
                 console.log(split)
-                numbersBefore = split[0]
-                numbersAfter = split[1]
+                numbersBefore = parseInt(split[0])
+                numbersAfter = parseInt(split[1])
                 operator = "/"
 
 }
