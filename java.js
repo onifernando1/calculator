@@ -3,6 +3,7 @@ let currentValue = ''
 const displayContainer = document.querySelector(".displayContainer")
 const display = document.querySelector(".display")
 const numbers = document.querySelectorAll(".show")
+const body = document.querySelector("body")
 let numbersAfter = ''
 let numbersBefore = ''
 let operator = ''
@@ -323,6 +324,7 @@ equalsButton.addEventListener("click", () => {
 
 const onButton = document.querySelector(".on")
 onButton.addEventListener("click", () => { 
+    body.style.background = "#9DE9B4"
 })
 
 
