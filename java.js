@@ -5,6 +5,8 @@ const displayContainer = document.querySelector(".displayContainer")
 const display = document.querySelector(".display")
 const memoryDisplay = document.querySelector(".memory")
 const memoryValue = document.querySelector(".memory")
+const numbers = document.querySelectorAll(".show")
+
 
 
 
@@ -43,6 +45,7 @@ let displayValue = result;
 // Clear functions
 let clearDisplay = function(){
     display.textContent = 0
+    displayValue = "0"
 }
 
 let clearMemory = function() {
@@ -74,95 +77,151 @@ let refresh = function(){
     newMemoryValue()
 }
 
-// refresh()
-
 
 // Number Functions
 
 // Get number when button clicked 
 
-let number = function() {
-    const numbers = document.querySelectorAll(".show")
-    numbers.forEach((number) => {
-        number.addEventListener("click", () => {
-            displayValue = number.textContent
-            currentValue = number.textContent
-            alert(`Current value is ${currentValue}`)
-            refresh()
-        })
+// let number = function() {
+//     const numbers = document.querySelectorAll(".show")
+//     numbers.forEach((number) => {
+//         number.addEventListener("click", () => {
+//             currentValue = number.textContent
+//             alert(currentValue)
+//         })
         
-    })
+//     })
 
+// }
+
+// let number = function() {
+//     numbers.forEach((number) => {
+//             x = number.textContent
+//         })
+        
+// }
+
+
+//Add to display string 
+
+let continueString = function() {
+    displayValue = displayValue + currentValue
+    refresh()
 }
 
-number()
+
+//Button events 
+
 
 const clearButton = document.querySelector(".clear")
 clearButton.addEventListener("click", () => { clearBoth()
 })
 
 const zeroButton = document.querySelector(".zero")
-zeroButton.addEventListener("click", () => { number()
+zeroButton.addEventListener("click", () => { 
+    currentValue = "0"
+    continueString()
 })
 
 const oneButton = document.querySelector(".one")
-oneButton.addEventListener("click", () => { number()
+oneButton.addEventListener("click", () => { 
+    currentValue = "1" 
+    continueString()
+
+
 })
 
 const twoButton = document.querySelector(".two")
-twoButton.addEventListener("click", () => { number()
+twoButton.addEventListener("click", () => { 
+    currentValue = "2"
+    continueString()
 })
 
 const threeButton = document.querySelector(".three")
-threeButton.addEventListener("click", () => { number()
+threeButton.addEventListener("click", () => { 
+    currentValue = "3"
+    continueString()
+
 })
 
 const fourButton = document.querySelector(".four")
-fourButton.addEventListener("click", () => { number()
+fourButton.addEventListener("click", () => { 
+    currentValue = "4"
+    continueString()
+
 })
 
 const fiveButton = document.querySelector(".five")
-fiveButton.addEventListener("click", () => { number()
+fiveButton.addEventListener("click", () => { 
+    currentValue = "5"
+    continueString()
+
 })
 
 const sixButton = document.querySelector(".six")
-sixButton.addEventListener("click", () => { number()
+sixButton.addEventListener("click", () => { 
+    currentValue = "6"
+    continueString()
+
 })
 
 const sevenButton = document.querySelector(".seven")
-sevenButton.addEventListener("click", () => { number()
+sevenButton.addEventListener("click", () => { 
+    currentValue = "7"
+    continueString()
+
 })
 
 const eightButton = document.querySelector(".eight")
-eightButton.addEventListener("click", () => { number()
+eightButton.addEventListener("click", () => { 
+    currentValue = "8"
+    continueString()
+
 })
 
 const nineButton = document.querySelector(".nine")
-nineButton.addEventListener("click", () => { number()
+nineButton.addEventListener("click", () => { 
+    currentValue = "9"
+    continueString()
+
 })
 
 const plusButton = document.querySelector(".add")
-plusButton.addEventListener("click", () => { number()
+plusButton.addEventListener("click", () => { 
+    currentValue = "+"
+    continueString()
+
 })
 
 
 const subractButton = document.querySelector(".subtract")
-subractButton.addEventListener("click", () => { number()
+subractButton.addEventListener("click", () => { 
+    currentValue = "-"
+    continueString()
+
 })
 
 
 const multiplyButton = document.querySelector(".multiply")
-multiplyButton.addEventListener("click", () => { number()
+multiplyButton.addEventListener("click", () => { 
+    currentValue = "*"
+    continueString()
 })
 
 
 const divideButton = document.querySelector(".divide")
-divideButton.addEventListener("click", () => { number()
+divideButton.addEventListener("click", () => { 
+    currentValue = "/"
+    continueString()
+
 })
 
 
 const decimalButton = document.querySelector(".decimal")
-decimalButton.addEventListener("click", () => { number()
+decimalButton.addEventListener("click", () => { 
+    currentValue = "."
+    continueString()
+
 })
 
 const equalsButton = document.querySelector(".equals")
@@ -172,12 +231,16 @@ equalsButton.addEventListener("click", () => {newDisplayValue()
 })
 
 const onButton = document.querySelector(".on")
-onButton.addEventListener("click", () => { number()
+onButton.addEventListener("click", () => { 
+    continueString()
+
 })
 
 
 const offButton = document.querySelector(".off")
-offButton.addEventListener("click", () => { number()
+offButton.addEventListener("click", () => { 
+    continueString()
+
 })
 
 
