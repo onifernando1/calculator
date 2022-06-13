@@ -128,8 +128,12 @@ const back = function () {
 
 
 
+//Round to 2.dp 
 
-
+const round = function() {
+    displayValue = displayValue.toFixed(2)
+    console.log(displayValue)
+}
 
 
 //Button events 
@@ -242,6 +246,11 @@ plusButton.addEventListener("click", () => {
 const subractButton = document.querySelector(".subtract")
 subractButton.addEventListener("click", () => { 
     currentValue = "-"
+    if (displayValue.includes("+") || displayValue.includes("-")|| displayValue.includes("*")|| displayValue.includes("/")){
+        splitUpString(displayValue)
+        operation(numbersBefore, operator, numbersAfter)
+        refresh()
+    }
     continueString()
     decimalButton.disabled = false
 
@@ -251,6 +260,11 @@ subractButton.addEventListener("click", () => {
 const multiplyButton = document.querySelector(".multiply")
 multiplyButton.addEventListener("click", () => { 
     currentValue = "*"
+    if (displayValue.includes("+") || displayValue.includes("-")|| displayValue.includes("*")|| displayValue.includes("/")){
+        splitUpString(displayValue)
+        operation(numbersBefore, operator, numbersAfter)
+        refresh()
+    }
     continueString()
     decimalButton.disabled = false
 
@@ -260,6 +274,11 @@ multiplyButton.addEventListener("click", () => {
 const divideButton = document.querySelector(".divide")
 divideButton.addEventListener("click", () => { 
     currentValue = "/"
+    if (displayValue.includes("+") || displayValue.includes("-")|| displayValue.includes("*")|| displayValue.includes("/")){
+        splitUpString(displayValue)
+        operation(numbersBefore, operator, numbersAfter)
+        refresh()
+    }
     continueString()
     decimalButton.disabled = false
 
@@ -281,6 +300,7 @@ const equalsButton = document.querySelector(".equals")
 equalsButton.addEventListener("click", () => {
                             splitUpString(displayValue)
                             operation(numbersBefore, operator, numbersAfter)
+                            round()
                             refresh()
                         })   
                           
