@@ -41,20 +41,22 @@ let displayValue = result;
 
 // Clear functions
 let clearDisplay = function(){
-    display.remove()
-    display.textContent = displayValue
-    const div = document.createElement("div")
-    div.classList.add("display")
-    displayContainer.appendChild(display)
+    // display.remove()
+    // display.textContent = displayValue
+    // const div = document.createElement("div")
+    // div.classList.add("display")
+    // displayContainer.appendChild(display)
+    display.textContent = 0
 }
 
 let clearMemory = function() {
-    memoryDisplay.remove()
-    const memoryContainer = document.querySelector(".memoryContainer")
-    const div = document.createElement("div")
-    div.classList.add("memory")
-    memoryContainer.appendChild(memoryValue)
-    memoryValue.textContent = memory
+    // memoryDisplay.remove()
+    // const memoryContainer = document.querySelector(".memoryContainer")
+    // const div = document.createElement("div")
+    // div.classList.add("memory")
+    // memoryContainer.appendChild(memoryValue)
+    // memoryValue.textContent = memory
+    memoryValue.textContent = 0
 }
 
 let clearBoth = function(){
@@ -65,28 +67,28 @@ let clearBoth = function(){
 
 //Update display
 
-let newDisplayValue = function(){
+// let newDisplayValue = function(){
     // display.textContent = displayValue
     // const div = document.createElement("div")
     // div.classList.add("display")
     // displayContainer.appendChild(display)
-}
+// }
 
 //Update memory
 
-let newMemoryValue = function() {
+// let newMemoryValue = function() {
     // const memoryContainer = document.querySelector(".memoryContainer")
     // const div = document.createElement("div")
     // div.classList.add("memory")
     // memoryContainer.appendChild(memoryValue)
     // memoryValue.textContent = memory
-}
+// }
 
 
 let refresh = function(){
     clearDisplay()
-    newDisplayValue()
-    newMemoryValue()
+    // newDisplayValue()
+    // newMemoryValue()
 }
 
 refresh()
