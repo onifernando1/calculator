@@ -42,10 +42,19 @@ let displayValue = result;
 // Clear functions
 let clearDisplay = function(){
     display.remove()
+    display.textContent = displayValue
+    const div = document.createElement("div")
+    div.classList.add("display")
+    displayContainer.appendChild(display)
 }
 
 let clearMemory = function() {
     memoryDisplay.remove()
+    const memoryContainer = document.querySelector(".memoryContainer")
+    const div = document.createElement("div")
+    div.classList.add("memory")
+    memoryContainer.appendChild(memoryValue)
+    memoryValue.textContent = memory
 }
 
 let clearBoth = function(){
@@ -57,20 +66,20 @@ let clearBoth = function(){
 //Update display
 
 let newDisplayValue = function(){
-    display.textContent = displayValue
-    const div = document.createElement("div")
-    div.classList.add("display")
-    displayContainer.appendChild(display)
+    // display.textContent = displayValue
+    // const div = document.createElement("div")
+    // div.classList.add("display")
+    // displayContainer.appendChild(display)
 }
 
 //Update memory
 
 let newMemoryValue = function() {
-    const memoryContainer = document.querySelector(".memoryContainer")
-    const div = document.createElement("div")
-    div.classList.add("memory")
-    memoryContainer.appendChild(memoryValue)
-    memoryValue.textContent = memory
+    // const memoryContainer = document.querySelector(".memoryContainer")
+    // const div = document.createElement("div")
+    // div.classList.add("memory")
+    // memoryContainer.appendChild(memoryValue)
+    // memoryValue.textContent = memory
 }
 
 
@@ -86,12 +95,16 @@ refresh()
 // Number Functions
 
 // Get number when button clicked 
+
 let number = function() {
     const numbers = document.querySelectorAll(".show")
     numbers.forEach((number) => {
         number.addEventListener("click", () => {
             // alert(number.textContent)
-            memory = parseInt(number.textContent)
+            // alert (parseInt(number.textContent))
+            displayValue = number.textContent
+            refresh()
+
         })
         
     })
@@ -107,61 +120,61 @@ const zeroButton = document.querySelector(".zero")
 zeroButton.onclick = () => clearBoth()
 
 const oneButton = document.querySelector(".one")
-oneButton.onclick = () => clearBoth()
+oneButton.onclick = () => number()
 
 const twoButton = document.querySelector(".two")
-twoButton.onclick = () => clearBoth()
+twoButton.onclick = () => number()
 
 const threeButton = document.querySelector(".three")
-threeButton.onclick = () => clearBoth()
+threeButton.onclick = () => number()
 
 const fourButton = document.querySelector(".four")
-fourButton.onclick = () => clearBoth()
+fourButton.onclick = () => number()
 
 const fiveButton = document.querySelector(".five")
-fiveButton.onclick = () => clearBoth()
+fiveButton.onclick = () => number()
 
 const sixButton = document.querySelector(".six")
-sixButton.onclick = () => clearBoth()
+sixButton.onclick = () => number()
 
 const sevenButton = document.querySelector(".seven")
-sevenButton.onclick = () => clearBoth()
+sevenButton.onclick = () => number()
 
 const eightButton = document.querySelector(".eight")
-eightButton.onclick = () => clearBoth()
+eightButton.onclick = () => number()
 
 const nineButton = document.querySelector(".nine")
-nineButton.onclick = () => clearBoth()
+nineButton.onclick = () => number()
 
 const plusButton = document.querySelector(".add")
-plusButton.onclick = () => clearBoth()
+plusButton.onclick = () => number()
 
 
 const subractButton = document.querySelector(".subtract")
-subractButton.onclick = () => clearBoth()
+subractButton.onclick = () => number()
 
 
 const multiplyButton = document.querySelector(".multiply")
-multiplyButton.onclick = () => clearBoth()
+multiplyButton.onclick = () => number()
 
 
 const divideButton = document.querySelector(".divide")
-divideButton.onclick = () => clearBoth()
+divideButton.onclick = () => number()
 
 
 const decimalButton = document.querySelector(".decimal")
-decimalButton.onclick = () => clearBoth()
+decimalButton.onclick = () => number()
 
 const equalsButton = document.querySelector(".equals")
-equalsButton.onclick = () => clearBoth()
+equalsButton.onclick = () => number()
 
 
 const onButton = document.querySelector(".on")
-onButton.onclick = () => clearBoth()
+onButton.onclick = () => number()
 
 
 const offButton = document.querySelector(".off")
-offButton.onclick = () => clearBoth()
+offButton.onclick = () => number()
 
 
 // const testButtons = document.querySelectorAll("button")
