@@ -71,3 +71,63 @@ refresh()
 
 const clearButton = document.querySelector(".clear")
 clearButton.onclick = () => clearBoth()
+
+const zeroButton = document.querySelector(".zero")
+zeroButton.onclick = () => clearBoth()
+
+const oneButton = document.querySelector(".one")
+oneButton.onclick = () => clearBoth()
+
+const twoButton = document.querySelector(".two")
+twoButton.onclick = () => clearBoth()
+
+const threeButton = document.querySelector(".three")
+threeButton.onclick = () => clearBoth()
+
+const fourButton = document.querySelector(".four")
+fourButton.onclick = () => clearBoth()
+
+const fiveButton = document.querySelector(".five")
+fiveButton.onclick = () => clearBoth()
+
+const sixButton = document.querySelector(".six")
+sixButton.onclick = () => clearBoth()
+
+const sevenButton = document.querySelector(".seven")
+sevenButton.onclick = () => clearBoth()
+
+const eightButton = document.querySelector(".eight")
+eightButton.onclick = () => clearBoth()
+
+const nineButton = document.querySelector(".nine")
+nineButton.onclick = () => clearBoth()
+
+const plusButton = document.querySelector(".add")
+plusButton.onclick = () => clearBoth()
+
+
+const subractButton = document.querySelector(".subtract")
+subractButton.onclick = () => clearBoth()
+
+
+const multiplyButton = document.querySelector(".multiply")
+multiplyButton.onclick = () => clearBoth()
+
+
+const divideButton = document.querySelector(".divide")
+divideButton.onclick = () => clearBoth()
+
+
+const decimalButton = document.querySelector(".decimal")
+decimalButton.onclick = () => clearBoth()
+
+const equalsButton = document.querySelector(".equals")
+equalsButton.onclick = () => clearBoth()
+
+
+const onButton = document.querySelector(".on")
+onButton.onclick = () => clearBoth()
+
+
+const offButton = document.querySelector(".off")
+offButton.onclick = () => clearBoth()
