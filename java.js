@@ -121,19 +121,16 @@ let continueString = function() {
     refresh()
 }
 
-// Split up string 
+// Split up string to operate
 let splitUpString = function(x) {    
     
 
     if (x.includes("+")) {
     let split = x.split("+")
     console.log(split)
-    numbersBefore = parseInt(split[0])
-    numbersAfter = parseInt(split[1])
+    numbersBefore = parseFloat(split[0])
+    numbersAfter = parseFloat(split[1])
     operator = "+" 
-    console.log({numbersBefore})
-    console.log({numbersAfter})
-    console.log({operator})
     
     } else if (x.includes("-")) {
         let split = x.split("-")
@@ -170,18 +167,14 @@ let splitUpString = function(x) {
 
 
 
-
-
-
-
-
-
-
 //Button events 
 
 
 const clearButton = document.querySelector(".clear")
-clearButton.addEventListener("click", () => { clearBoth()
+clearButton.addEventListener("click", () => { 
+    clearBoth()
+    decimalButton.disabled = false
+
 })
 
 const zeroButton = document.querySelector(".zero")
@@ -257,6 +250,7 @@ const plusButton = document.querySelector(".add")
 plusButton.addEventListener("click", () => { 
     currentValue = "+"
     continueString()
+    decimalButton.disabled = false
 
 })
 
@@ -265,6 +259,7 @@ const subractButton = document.querySelector(".subtract")
 subractButton.addEventListener("click", () => { 
     currentValue = "-"
     continueString()
+    decimalButton.disabled = false
 
 })
 
@@ -273,6 +268,8 @@ const multiplyButton = document.querySelector(".multiply")
 multiplyButton.addEventListener("click", () => { 
     currentValue = "*"
     continueString()
+    decimalButton.disabled = false
+
 })
 
 
@@ -280,6 +277,8 @@ const divideButton = document.querySelector(".divide")
 divideButton.addEventListener("click", () => { 
     currentValue = "/"
     continueString()
+    decimalButton.disabled = false
+
 
 })
 
@@ -288,6 +287,9 @@ const decimalButton = document.querySelector(".decimal")
 decimalButton.addEventListener("click", () => { 
     currentValue = "."
     continueString()
+    //disable point button if number already has decimal
+    decimalButton.disabled = true
+    
 
 })
 
@@ -314,6 +316,7 @@ offButton.addEventListener("click", () => {
     continueString()
 
 })
+
 
 
 
