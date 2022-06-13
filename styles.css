@@ -38,6 +38,7 @@ button {
     height: 200px;
     width: 426px;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin:20px;
@@ -49,6 +50,12 @@ button {
 .display {
     font-size: 90px;
     color: rgb(154, 250, 154);
+}
+
+.memory {
+    font-size: 40px;
+    color: rgb(154, 250, 154);
+
 }
 
 .zero {
