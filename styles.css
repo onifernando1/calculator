@@ -87,3 +87,7 @@ button {
     display: flex;
 }
 
+.divide, .multiply, .add, .subtract, .equals {
+    background-color:rgb(219, 168, 74);
+}
+

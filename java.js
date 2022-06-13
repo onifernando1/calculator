@@ -159,7 +159,13 @@ let splitUpString = function(x) {
 
 }
 
+//Go back (delete last digit)
 
+const back = function () {
+    let input = display.textContent
+    displayValue = input.slice(0, -1)
+    return displayValue
+}
 
 
 
@@ -168,6 +174,20 @@ let splitUpString = function(x) {
 
 
 //Button events 
+
+const button = document.querySelectorAll("button")
+button.forEach((butt) => {
+    butt.addEventListener("mouseover", function handleMouseOver() {
+        butt.style.background = "#885292"
+    })
+
+    butt.addEventListener("mouseout", function handleMouseOut() {
+        butt.style.background = ""
+    })
+})
+
+
+
 
 
 const clearButton = document.querySelector(".clear")
@@ -306,21 +326,14 @@ equalsButton.addEventListener("click", () => {
 
 const onButton = document.querySelector(".on")
 onButton.addEventListener("click", () => { 
-    continueString()
-
 })
 
 
-const offButton = document.querySelector(".off")
-offButton.addEventListener("click", () => { 
-    continueString()
-
+const backButton = document.querySelector(".back")
+backButton.addEventListener("click", () => {
+    back()
+    refresh()
 })
-
-
-
-
-
 
 
 
