@@ -25,15 +25,23 @@ const operation = function(a, operator, b) {
     
     if (operator == "+") {
         add(a,b)
+        return result
+
     }
     else if (operator == "-") {
         subtract(a,b)
+        return result
+
     }
     else if (operator == "*") {
         multiply(a,b)
+        return result
+
     }
     else if (operator == "/") {
         divide(a,b)
+        return result
+
     } else {
         return "INVALID OPERATOR"
     }
