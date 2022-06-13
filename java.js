@@ -67,12 +67,12 @@ let clearBoth = function(){
 
 //Update display
 
-// let newDisplayValue = function(){
-    // display.textContent = displayValue
+let newDisplayValue = function(){
+    display.textContent = displayValue
     // const div = document.createElement("div")
     // div.classList.add("display")
     // displayContainer.appendChild(display)
-// }
+}
 
 //Update memory
 
@@ -168,7 +168,7 @@ const decimalButton = document.querySelector(".decimal")
 decimalButton.onclick = () => number()
 
 const equalsButton = document.querySelector(".equals")
-equalsButton.onclick = () => number()
+equalsButton.onclick = () => newDisplayValue()
 
 
 const onButton = document.querySelector(".on")
