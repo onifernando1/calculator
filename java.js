@@ -74,7 +74,6 @@ let clearBoth = function(){
 
 let newDisplayValue = function(){
     display.textContent = displayValue
-    console.log(`Your display value @newdisplayvalue is ${displayValue}`)
 }
 
 //Update memory
