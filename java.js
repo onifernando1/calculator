@@ -76,22 +76,23 @@ let newDisplayValue = function(){
 
 //Update memory
 
-// let newMemoryValue = function() {
+let newMemoryValue = function() {
     // const memoryContainer = document.querySelector(".memoryContainer")
     // const div = document.createElement("div")
     // div.classList.add("memory")
     // memoryContainer.appendChild(memoryValue)
-    // memoryValue.textContent = memory
-// }
-
-
-let refresh = function(){
-    clearDisplay()
-    // newDisplayValue()
-    // newMemoryValue()
+    memoryValue.textContent = memory
+    
 }
 
-refresh()
+
+// let refresh = function(){
+//     clearDisplay()
+    // newDisplayValue()
+    // newMemoryValue()
+// }
+
+// refresh()
 
 
 // Number Functions
@@ -168,8 +169,9 @@ const decimalButton = document.querySelector(".decimal")
 decimalButton.onclick = () => number()
 
 const equalsButton = document.querySelector(".equals")
-equalsButton.onclick = () => newDisplayValue()
-
+equalsButton.addEventListener("click", () => {newDisplayValue()
+                             newMemoryValue()   
+})
 
 const onButton = document.querySelector(".on")
 onButton.onclick = () => number()
