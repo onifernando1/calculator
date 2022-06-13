@@ -86,11 +86,10 @@ let newMemoryValue = function() {
 }
 
 
-// let refresh = function(){
-//     clearDisplay()
-    // newDisplayValue()
-    // newMemoryValue()
-// }
+let refresh = function(){
+    newDisplayValue()
+    newMemoryValue()
+}
 
 // refresh()
 
