@@ -153,6 +153,10 @@ let splitUpString = function(x) {
                 console.log(split)
                 numbersBefore = parseInt(split[0])
                 numbersAfter = parseInt(split[1])
+                if (numbersAfter == 0) {
+                    alert("NO! NO DIVING BY ZERO!")
+                    return numbersAfter = 1
+                } 
                 operator = "/"
 
 }
