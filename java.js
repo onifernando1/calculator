@@ -25,27 +25,25 @@ const operation = function(a, operator, b) {
     
     if (operator == "+") {
         add(a,b)
-        console.log(result)
         displayValue = result
-        console.log(displayValue)
         return displayValue
 
 
     }
     else if (operator == "-") {
         subtract(a,b)
-        return result
-
+        displayValue = result
+        return displayValue
     }
     else if (operator == "*") {
         multiply(a,b)
-        return result
-
+        displayValue = result
+        return displayValue
     }
     else if (operator == "/") {
         divide(a,b)
-        return result
-
+        displayValue = result
+        return displayValue
     } else {
         return "INVALID OPERATOR"
     }
