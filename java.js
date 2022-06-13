@@ -1,10 +1,7 @@
 let result = ''
-let memory = '';
 let currentValue = ''
 const displayContainer = document.querySelector(".displayContainer")
 const display = document.querySelector(".display")
-const memoryDisplay = document.querySelector(".memory")
-const memoryValue = document.querySelector(".memory")
 const numbers = document.querySelectorAll(".show")
 let numbersAfter = ''
 let numbersBefore = ''
@@ -51,23 +48,16 @@ const operation = function(a, operator, b) {
 }
 
 
-// Show result of operation on display
-
-
 // Clear functions
 let clearDisplay = function(){
     display.textContent = 0
     displayValue = ""
 }
 
-let clearMemory = function() {
-    memoryValue.textContent = ""
-}
+
 
 let clearBoth = function(){
     clearDisplay()
-    clearMemory()
-
 }
 
 //Update display
@@ -76,42 +66,11 @@ let newDisplayValue = function(){
     display.textContent = displayValue
 }
 
-//Update memory
-
-let newMemoryValue = function() {
-    memoryValue.textContent = memory
-    
-}
 
 
 let refresh = function(){
     newDisplayValue()
-    newMemoryValue()
 }
-
-
-// Number Functions
-
-// Get number when button clicked 
-
-// let number = function() {
-//     const numbers = document.querySelectorAll(".show")
-//     numbers.forEach((number) => {
-//         number.addEventListener("click", () => {
-//             currentValue = number.textContent
-//             alert(currentValue)
-//         })
-        
-//     })
-
-// }
-
-// let number = function() {
-//     numbers.forEach((number) => {
-//             x = number.textContent
-//         })
-        
-// }
 
 
 //Add to display string 
@@ -269,6 +228,11 @@ nineButton.addEventListener("click", () => {
 const plusButton = document.querySelector(".add")
 plusButton.addEventListener("click", () => { 
     currentValue = "+"
+    if (displayValue.includes("+") || displayValue.includes("-")|| displayValue.includes("*")|| displayValue.includes("/")){
+        splitUpString(displayValue)
+        operation(numbersBefore, operator, numbersAfter)
+        refresh()
+    }
     continueString()
     decimalButton.disabled = false
 
@@ -315,9 +279,6 @@ decimalButton.addEventListener("click", () => {
 
 const equalsButton = document.querySelector(".equals")
 equalsButton.addEventListener("click", () => {
-                            // newDisplayValue()
-                            //  newMemoryValue()   
-                            //  memory = result
                             splitUpString(displayValue)
                             operation(numbersBefore, operator, numbersAfter)
                             refresh()
@@ -336,21 +297,4 @@ backButton.addEventListener("click", () => {
 })
 
 
-
-
-/*
-55 + 78 
-
-1. cut numbers before operator (55)
-2. turn to interger 55 
-3. cut numbers after operator 78
-4. turn to intergers 78 
-5. get operator + 
-6. put into function operator(a, operator, b )
-    where a = numbers before
-    operator = operator 
-    b = numbers after
-7 return 
-
-*/ 
 
