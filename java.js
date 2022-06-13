@@ -32,16 +32,11 @@ const operation = function(a, operator, b) {
 
 operation(1, "*" , 3)
 
-
+// Show result of operation on display
 let displayValue = result;
-console.log({displayValue})
 
 
-// let clear = function(){
-//     const display = document.querySelector(".display")
-//     display.remove()
-// }
-
+// Clear functions
 let clearDisplay = function(){
     display.remove()
 }
@@ -56,20 +51,14 @@ let clearBoth = function(){
 
 }
 
+//Update display
+
 let newDisplayValue = function(){
     display.textContent = displayValue
     const div = document.createElement("div")
     div.classList.add("display")
     displayContainer.appendChild(display)
 }
-
-// let newDisplayValue = function(){
-//     const displayContainer = document.querySelector(".displayContainer")
-//     const display = document.createElement("div")
-//     display.classList.add("display")
-//     display.textContent = displayValue
-//     displayContainer.appendChild(display)
-// }
 
 let refresh = function(){
     clearDisplay()
@@ -78,6 +67,7 @@ let refresh = function(){
 
 refresh()
 
+//Buttons
 
 const clearButton = document.querySelector(".clear")
 clearButton.onclick = () => clearBoth()
