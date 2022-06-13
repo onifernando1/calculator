@@ -1,5 +1,5 @@
 let result = 0
-let memory = ''
+let memory = '';
 const displayContainer = document.querySelector(".displayContainer")
 const display = document.querySelector(".display")
 const memoryDisplay = document.querySelector(".memory")
