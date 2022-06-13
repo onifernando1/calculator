@@ -1,4 +1,5 @@
 let result = 0
+let memory = ''
 const displayContainer = document.querySelector(".displayContainer")
 const display = document.querySelector(".display")
 const memoryDisplay = document.querySelector(".memory")
@@ -67,7 +68,22 @@ let refresh = function(){
 
 refresh()
 
-//Buttons
+
+// Number Functions
+
+// Get number when button clicked 
+let number = function() {
+    const numbers = document.querySelectorAll(".show")
+    numbers.forEach((number) => {
+        number.addEventListener("click", () => {
+            alert(number.textContent)
+        })
+        
+    })
+
+}
+
+number()
 
 const clearButton = document.querySelector(".clear")
 clearButton.onclick = () => clearBoth()
@@ -131,3 +147,13 @@ onButton.onclick = () => clearBoth()
 
 const offButton = document.querySelector(".off")
 offButton.onclick = () => clearBoth()
+
+
+// const testButtons = document.querySelectorAll("button")
+// testButtons.forEach((button) => {
+    
+//     button.addEventListener("click", () => {
+//         alert(button.textContent)
+//     })
+
+// })
