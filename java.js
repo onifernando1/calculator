@@ -1,8 +1,10 @@
 let result = 0
-let memory = '';
+let memory = 5;
 const displayContainer = document.querySelector(".displayContainer")
 const display = document.querySelector(".display")
 const memoryDisplay = document.querySelector(".memory")
+const memoryValue = document.querySelector(".memory")
+
 
 
 // Operations
@@ -61,9 +63,21 @@ let newDisplayValue = function(){
     displayContainer.appendChild(display)
 }
 
+//Update memory
+
+let newMemoryValue = function() {
+    const memoryContainer = document.querySelector(".memoryContainer")
+    const div = document.createElement("div")
+    div.classList.add("memory")
+    memoryContainer.appendChild(memoryValue)
+    memoryValue.textContent = memory
+}
+
+
 let refresh = function(){
     clearDisplay()
     newDisplayValue()
+    newMemoryValue()
 }
 
 refresh()
@@ -76,7 +90,8 @@ let number = function() {
     const numbers = document.querySelectorAll(".show")
     numbers.forEach((number) => {
         number.addEventListener("click", () => {
-            alert(number.textContent)
+            // alert(number.textContent)
+            memory = parseInt(number.textContent)
         })
         
     })
