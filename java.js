@@ -131,8 +131,19 @@ const back = function () {
 //Round to 2.dp 
 
 const round = function() {
-    displayValue = displayValue.toFixed(2)
+    displayValue = parseFloat(displayValue).toFixed(2)
     console.log(displayValue)
+}
+
+//Disable buttons if length too long 
+
+const tooLong = function() {
+    let displayLength = displayValue.length 
+    displayLength = parseInt(displayLength)
+    if (displayLength >= 9 ){
+    back()
+    alert("TOO MANY NUMBERS!")
+    }
 }
 
 
@@ -146,6 +157,10 @@ button.forEach((butt) => {
 
     butt.addEventListener("mouseout", function handleMouseOut() {
         butt.style.background = ""
+    })
+
+    butt.addEventListener("click", () => {
+        tooLong()
     })
 })
 
@@ -302,6 +317,7 @@ equalsButton.addEventListener("click", () => {
                             operation(numbersBefore, operator, numbersAfter)
                             round()
                             refresh()
+                            tooLong()
                         })   
                           
 
