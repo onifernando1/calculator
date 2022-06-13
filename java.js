@@ -9,7 +9,7 @@ const numbers = document.querySelectorAll(".show")
 let numbersAfter = ''
 let numbersBefore = ''
 let operator = ''
-
+let displayValue = result 
 
 
 
@@ -25,7 +25,11 @@ const operation = function(a, operator, b) {
     
     if (operator == "+") {
         add(a,b)
-        return result
+        console.log(result)
+        displayValue = result
+        console.log(displayValue)
+        return displayValue
+
 
     }
     else if (operator == "-") {
@@ -50,7 +54,6 @@ const operation = function(a, operator, b) {
 
 
 // Show result of operation on display
-let displayValue = result;
 
 
 // Clear functions
@@ -73,6 +76,7 @@ let clearBoth = function(){
 
 let newDisplayValue = function(){
     display.textContent = displayValue
+    console.log(`Your display value @newdisplayvalue is ${displayValue}`)
 }
 
 //Update memory
@@ -292,7 +296,10 @@ equalsButton.addEventListener("click", () => {
                             //  newMemoryValue()   
                             //  memory = result
                             splitUpString(displayValue)
-                            operation(numbersBefore, operator, numbersAfter)})
+                            operation(numbersBefore, operator, numbersAfter)
+                            refresh()
+                        })   
+                          
 
 const onButton = document.querySelector(".on")
 onButton.addEventListener("click", () => { 
