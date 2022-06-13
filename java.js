@@ -6,6 +6,9 @@ const display = document.querySelector(".display")
 const memoryDisplay = document.querySelector(".memory")
 const memoryValue = document.querySelector(".memory")
 const numbers = document.querySelectorAll(".show")
+let numbersAfter = ''
+let numbersBefore = ''
+let operator = ''
 
 
 
@@ -108,6 +111,55 @@ let continueString = function() {
     displayValue = displayValue + currentValue
     refresh()
 }
+
+// Split up string 
+let splitUpString = function(x) {    
+    
+    let dV = "200  300"
+
+    if (dV.includes("+")) {
+    let split = dV.split("+")
+    console.log(split)
+    numbersBefore = split[0]
+    numbersAfter = split[1]
+    operator = "+"
+    
+    } else if (dV.includes("-")) {
+        let split = dV.split("-")
+        console.log(split)
+        numbersBefore = split[0]
+        numbersAfter = split[1]
+        operator = "-"
+    } else if (dV.includes("*")) {
+            let split = dV.split("*")
+            console.log(split)
+            numbersBefore = split[0]
+            numbersAfter = split[1]
+            operator = "*"
+    } else if (dV.includes("/")) {
+                let split = dV.split("/")
+                console.log(split)
+                numbersBefore = split[0]
+                numbersAfter = split[1]
+                operator = "/"
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Button events 
@@ -225,9 +277,13 @@ decimalButton.addEventListener("click", () => {
 })
 
 const equalsButton = document.querySelector(".equals")
-equalsButton.addEventListener("click", () => {newDisplayValue()
+equalsButton.addEventListener("click", () => {
+                            newDisplayValue()
                              newMemoryValue()   
                              memory = result
+
+
+                             operation()
 })
 
 const onButton = document.querySelector(".on")
@@ -244,26 +300,25 @@ offButton.addEventListener("click", () => {
 })
 
 
-// const testButtons = document.querySelectorAll("button")
-// testButtons.forEach((button) => {
-    
-//     button.addEventListener("click", () => {
-//         alert(button.textContent)
-//     })
 
-// })
+
 
 
 
 
 /*
-1. click a button (1)
-2. store what they clicked (1)
-3. display what they clicked (1)
-3. click another button (2)
-4. store what they clicked + what they clicked  (12)
-5. display (12)
+55 + 78 
 
-
+1. cut numbers before operator (55)
+2. turn to interger 55 
+3. cut numbers after operator 78
+4. turn to intergers 78 
+5. get operator + 
+6. put into function operator(a, operator, b )
+    where a = numbers before
+    operator = operator 
+    b = numbers after
+7 return 
 
 */ 
+
