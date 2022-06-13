@@ -57,11 +57,11 @@ const operation = function(a, operator, b) {
 // Clear functions
 let clearDisplay = function(){
     display.textContent = 0
-    displayValue = "0"
+    displayValue = ""
 }
 
 let clearMemory = function() {
-    memoryValue.textContent = 0
+    memoryValue.textContent = ""
 }
 
 let clearBoth = function(){
