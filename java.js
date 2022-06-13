@@ -41,21 +41,10 @@ let displayValue = result;
 
 // Clear functions
 let clearDisplay = function(){
-    // display.remove()
-    // display.textContent = displayValue
-    // const div = document.createElement("div")
-    // div.classList.add("display")
-    // displayContainer.appendChild(display)
     display.textContent = 0
 }
 
 let clearMemory = function() {
-    // memoryDisplay.remove()
-    // const memoryContainer = document.querySelector(".memoryContainer")
-    // const div = document.createElement("div")
-    // div.classList.add("memory")
-    // memoryContainer.appendChild(memoryValue)
-    // memoryValue.textContent = memory
     memoryValue.textContent = 0
 }
 
@@ -69,18 +58,11 @@ let clearBoth = function(){
 
 let newDisplayValue = function(){
     display.textContent = displayValue
-    // const div = document.createElement("div")
-    // div.classList.add("display")
-    // displayContainer.appendChild(display)
 }
 
 //Update memory
 
 let newMemoryValue = function() {
-    // const memoryContainer = document.querySelector(".memoryContainer")
-    // const div = document.createElement("div")
-    // div.classList.add("memory")
-    // memoryContainer.appendChild(memoryValue)
     memoryValue.textContent = memory
     
 }
@@ -102,11 +84,8 @@ let number = function() {
     const numbers = document.querySelectorAll(".show")
     numbers.forEach((number) => {
         number.addEventListener("click", () => {
-            // alert(number.textContent)
-            // alert (parseInt(number.textContent))
             displayValue = number.textContent
             refresh()
-
         })
         
     })
@@ -170,6 +149,7 @@ decimalButton.onclick = () => number()
 const equalsButton = document.querySelector(".equals")
 equalsButton.addEventListener("click", () => {newDisplayValue()
                              newMemoryValue()   
+                             memory = result
 })
 
 const onButton = document.querySelector(".on")
