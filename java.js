@@ -14,7 +14,7 @@ let operator = ''
 
 
 // Operations
-const add = (a,b) => result = a + b ;
+const add = (a,b) => result = a + b ; 
 const subtract = (a,b) => result = a - b ; 
 const multiply = (a,b) => result = a * b ;
 const divide = (a,b) => result = a / b ;
@@ -22,6 +22,11 @@ const divide = (a,b) => result = a / b ;
 
 //Operation function
 const operation = function(a, operator, b) {
+
+    a = parseInt(a)
+    a = parseInt(b)
+
+    
     if (operator == "+") {
         add(a,b)
     }
@@ -39,7 +44,6 @@ const operation = function(a, operator, b) {
 
 }
 
-operation(1, "*" , 3)
 
 // Show result of operation on display
 let displayValue = result;
@@ -115,29 +119,28 @@ let continueString = function() {
 // Split up string 
 let splitUpString = function(x) {    
     
-    let dV = "200  300"
 
-    if (dV.includes("+")) {
-    let split = dV.split("+")
+    if (x.includes("+")) {
+    let split = x.split("+")
     console.log(split)
     numbersBefore = split[0]
     numbersAfter = split[1]
-    operator = "+"
+    operator = "+" 
     
-    } else if (dV.includes("-")) {
-        let split = dV.split("-")
+    } else if (x.includes("-")) {
+        let split = x.split("-")
         console.log(split)
         numbersBefore = split[0]
         numbersAfter = split[1]
         operator = "-"
-    } else if (dV.includes("*")) {
-            let split = dV.split("*")
+    } else if (x.includes("*")) {
+            let split = x.split("*")
             console.log(split)
             numbersBefore = split[0]
             numbersAfter = split[1]
             operator = "*"
-    } else if (dV.includes("/")) {
-                let split = dV.split("/")
+    } else if (x.includes("/")) {
+                let split = x.split("/")
                 console.log(split)
                 numbersBefore = split[0]
                 numbersAfter = split[1]
@@ -278,13 +281,11 @@ decimalButton.addEventListener("click", () => {
 
 const equalsButton = document.querySelector(".equals")
 equalsButton.addEventListener("click", () => {
-                            newDisplayValue()
-                             newMemoryValue()   
-                             memory = result
-
-
-                             operation()
-})
+                            // newDisplayValue()
+                            //  newMemoryValue()   
+                            //  memory = result
+                            splitUpString(displayValue)
+                            operation(numbersBefore, operator, numbersAfter)})
 
 const onButton = document.querySelector(".on")
 onButton.addEventListener("click", () => { 
